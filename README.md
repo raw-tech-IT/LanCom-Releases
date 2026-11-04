@@ -1,2 +1,2 @@
 # LanCom-Releases
-fficial public releases and downloads for LanCom Messenger
+official public releases and downloads for LanCom Messenger
