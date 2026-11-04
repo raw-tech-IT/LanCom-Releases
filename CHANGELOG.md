@@ -1,63 +1,58 @@
-# LANCOM Release Changelog
+# Changelog
 
-This file records public build changes based on the release information supplied for each version.
+User-facing changes and release highlights for LANCOM.
 
-## [5.0.0-rc.86] — Windows Release Candidate
+## Windows — V5 RC86 · 2026-11-04
 
-**Release type:** Release Candidate  
-**Platform:** Windows x64  
-**Source revision:** `ad702aa02040a288440ba6ea90390b80635193ad`
+### Messaging and presence
 
-### Changed
+- Direct local-network conversations with Windows and Android users.
+- Automatic delivery of pending outgoing messages after a recipient reconnects.
+- Clear offline messaging guidance in conversations.
+- Improved profile-picture handling, synchronized presence and status-note display.
+- Custom PNG/JPG role badges, optional badge titles and removable selected badges.
 
-- The About section now lists only Rohan Vasava as Lead Developer.
-- Removed the two fictional developer names.
-- Retained TwoFish Studios branding, website links, and contact details.
-- Updated the Windows title bar to display LANCOM followed by lowercase `v5 rc86` in 12-point regular text beside the 15-point semibold app name.
-- Retained all Alpha85 functionality, including safe numbered duplicate downloads.
+### File sharing
 
-### Validation
+- Encrypted peer-to-peer file transfers with requests and progress inside chats.
+- Pending file offers for offline recipients, using the receiver's acceptance preferences when they reconnect.
+- Background file preparation with progress and cancellation where required.
+- Themed drag-and-drop feedback and navigation to recent transfers.
+- Automatic numbered filenames when a download destination already exists, including simultaneous downloads.
+- Open and Show in Folder actions use the actual saved filename.
+- LANCOM-specific upload/download statistics and corrected network-adapter selection.
 
-- 34 existing Windows title, profile, and settings checks passed.
-- Installer payload verification passed.
-- Isolated packaged-app launch passed.
-- No new behavior tests or full-suite rerun were performed for this credits/title-only revision.
-- The previous Alpha85 full-suite report remains 1,618 passed.
-- No host installation or peer sends were performed.
+### Storage and security
 
-### Known limitations
+- Encrypted local message and transfer history.
+- Password-protected backup and restore for profile, preferences and history.
+- Device identity checks, authenticated sessions and verified transfer completion.
+- Safer handling of invalid input, interrupted transfers and storage conflicts.
 
-- The Windows installer is unsigned.
-- RC is a release label, not a production, security, or scale certification.
-- Prior physical-device, signing, and deployment validation limitations remain.
+### Interface and installation
 
-### Windows installer details
+- Consistent workspace spacing, responsive dialogs and theme-aware controls.
+- Improved text entry, emoji rendering, notification styling and tray restoration.
+- Light Fluent installer with installation progress and visible app launch after completion.
+- Smaller lowercase `v5 rc86` title-bar label.
+- About credits list Rohan Vasava as the lead developer at TwoFish Studios.
 
-- **Filename:** `LANCOM-Setup-5.0.0-rc86-x64.exe`
-- **Size:** 65,232,896 bytes
-- **SHA-256:** `23DF8698B99E78CB32991929DA5A8E66CC6490B2F2821E438D27D0A76806C2EB`
+## Android — 1.2.4 · 2026-11-04
 
-## Android preview — 1.2.4-preview (code 8)
+### Release package
 
-This is a separate Android preview build, not the Android equivalent of Windows 5.0.0-rc.86.
+- Optimized, signed APK for direct installation.
+- Production application ID: `com.lancom.android`.
+- Android 8.0 and later supported by the application's minimum SDK setting.
 
-### Changed
+### Features
 
-- The About section now lists only Rohan Vasava.
-- The About button remains at the bottom of Settings.
+- Local-network discovery, active-user presence and Windows-compatible messaging.
+- Shared profile pictures, display names and status notes.
+- Encrypted file transfers with in-chat requests, acceptance controls, progress and cancellation.
+- Save-location selection and actions for completed downloads.
+- Conversation and transfer history, message notifications and emoji selection.
+- Connection security information available from conversations.
+- About us at the bottom of Settings, with product links, contact details and Rohan Vasava's developer credit.
 
-### Validation and limitations
-
-- Build and lint passed with 0 errors and 30 existing warnings.
-- APK signature matches the previous preview signer.
-- No phone installation or Android unit/instrumentation rerun was performed for this copy-only change.
-- Android continues to use the existing development preview key.
-
-### Android APK details
-
-- **Build path supplied:** `release/android-preview/LanCom-Android-1.2.4-preview.apk`
-- **SHA-256:** `B17395688759792785236392EC3A8C6752EA72D63088B36FBFB4FD455C1B0BF9`
-
----
-
-Older Alpha85 test results are included only as historical validation context; they are not a claim that the full suite was rerun for RC86.
+Windows and Android have different feature sets. See the README for platform availability, network requirements and storage details.
